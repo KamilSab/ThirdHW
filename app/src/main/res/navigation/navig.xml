@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navig"
+    app:startDestination="@id/citiesFragment">
+
+    <fragment
+        android:id="@+id/citiesFragment"
+        android:name="ru.itis.summerpractic24.CitiesFragment"
+        android:label="fragment_cities"
+        tools:layout="@layout/fragment_cities" >
+        <action
+            android:id="@+id/action_citiesFragment_to_infoScreenFragment"
+            app:destination="@id/infoScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoScreenFragment"
+        android:name="ru.itis.summerpractic24.InfoScreenFragment"
+        android:label="fragment_info_screen"
+        tools:layout="@layout/fragment_info_screen" >
+        <action
+            android:id="@+id/action_infoScreenFragment_to_citiesFragment"
+            app:destination="@id/citiesFragment" />
+    </fragment>
+
+
+</navigation>
